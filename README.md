@@ -2,7 +2,7 @@ Project Name: <br/>
 Team Number: 26 <br/>
 Team Members: Dylan Huang, Trevor Lau <br/>
 Project Description: <br/>
-UML Diagram Link: https://lucid.app/publicSegments/view/7d36950e-ef89-4854-b9e2-56c1609f1dd4 <br/>
+UML Diagram Link: https://github.com/huangdylan08/dbdesign-p1/blob/main/db_design_final_project_UML.pdf <br/>
 Description of User Data Model: <br/>
 Description of the Two Domain Object Data Models: <br/>
 Description of the User to Domain Object Relationship: <br/>
