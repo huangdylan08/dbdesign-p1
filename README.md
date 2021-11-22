@@ -1,4 +1,4 @@
-Project Name: <br/>
+Project Name: Genshin Impact Database (temp) <br/>
 Team Number: 26 <br/>
 Team Members: Dylan Huang, Trevor Lau <br/>
 Project Description: We are modeling a role playing game named Genshin Impact. In the game, the player collects and levels up characters and weapons who each have different abilities/types. <br/>
