@@ -1,6 +1,6 @@
 Project Name: Genshin Impact Database (temp) <br/>
 Team Number: 26 <br/>
-Team Members: Dylan Huang, Trevor Lau <br/>
+Team Members: Dylan Huang, Trevor Lau, Section 4 (T/F 1:35 Annunziato) <br/>
 Project Description: We are modeling a role playing game named Genshin Impact. In the game, the player collects and levels up characters and weapons who each have different abilities/types. <br/>
 UML Diagram Link: https://github.com/huangdylan08/dbdesign-p1/blob/main/db_design_final_project_UML.pdf <br/>
 Description of User Data Model: The user model represents the player and stores a player id, first name, last name, username, password, email, and date of birth. <br/>
@@ -9,3 +9,8 @@ Description of the User to Domain Object Relationship: We have a one to many rel
 Description of the Domain Object to Domain Object Relationship: We have a 0...1 to 1 relationship between our two Domain Objects, characters and weapons. This means that every character has to wield a weapon, while a weapon does not necessarily have to be wielded by a character and can just sit in your inventory. <br/>
 Description of the Portable Enumeration(s): We have two enumerations, WeaponType and Element. WeaponType's enumerations are Bow, Polearm, Sword, Claymore, and Catalyst, and is used in both domain objects to define what weapons a character can use and what type a weapon is. Element's enumerations are Pyro, Cryo, Electro, Anemo, Geo, and Hydro, which define the elemental type of a character. <br/>
 Description of the User Interface Requirements: <br/>
+
+Problem Statement: We are modeling a role playing game named Genshin Impact. In the game, players collect and level up characters and weapons. The objective of the game is to create strong characters. However, there is no easy way to compare various characters and weapons to other characters and weapons. <br/>
+Solution Statement: Our solution tracks a player's owned characters and weapons and their respective stats. By gathering all of the information into a single database, a player can quickly query the database about their characters and weapons in order to easily compare them to determine which is the strongest. <br/>
+User: A typical user of our solution would be a Genshin Impact player. Because the objective of the game is become as strong as possible, our solution for easily comparing characters and weapons would be helpful to both beginners and professionals. <br/>
+Domain Objects: The first domain object that we are modeling are Characters. The Character Data Models contain an id, name, level, rarity, base attack, base health, weapon type, and their element. The Characters represents characters owned by the user. The second domain object that we are modeling are Weapons. The Weapon Data Models contain an id, weapon name, weapon type, level, refinement level, rarity, base attack, ability name, and ability description. There is a 0...1 to 1 relationship between Characters and Weapons as each character must use a weapon but not all weapons must be used. <br/>
