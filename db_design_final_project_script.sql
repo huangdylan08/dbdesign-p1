@@ -45,7 +45,8 @@ CREATE TABLE `db_design`.`characters` (
 	`health` INT NULL,
 	`weapon_type` VARCHAR(20) NULL,
 	`element` VARCHAR(20) NULL,
-	`userId` INT NULL,
+	`user_id` INT NULL,
+	`weapon_id` INT NULL,
 	PRIMARY KEY (`id`),
 	CONSTRAINT `character_to_weapon_type`
 		FOREIGN KEY (`weapon_type`)
@@ -58,15 +59,20 @@ CREATE TABLE `db_design`.`characters` (
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION,
 	CONSTRAINT `character_to_user`
-		FOREIGN KEY (`userId`)
+		FOREIGN KEY (`user_id`)
 		REFERENCES `db_design`.`users` (`id`)
+		ON DELETE NO ACTION
+		ON UPDATE NO ACTION,
+	CONSTRAIN `character_to_weapon`
+		FOREIGN KEY (`weapon_id`)
+		REFERENCES `db_design`.`weapons` (`id`)
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION);
    
-INSERT INTO characters VALUES(NULL, 'Zhongli', 90, 5, 892, 54610, 'Polearm', 'Geo', 1);
-INSERT INTO characters VALUES(NULL, 'Bennett', 80, 4, 875, 28661, 'Sword', 'Pyro', 1);
-INSERT INTO characters VALUES(NULL, 'Eula', 81, 5, 1899, 20470, 'Claymore', 'Cyro', 2);
-INSERT INTO characters VALUES(NULL, 'Lisa', 20, 4, 209, 2661, 'Catalyst', 'Electro', 2);
+INSERT INTO characters VALUES(NULL, 'Zhongli', 90, 5, 892, 54610, 'Polearm', 'Geo', 1, 1);
+INSERT INTO characters VALUES(NULL, 'Bennett', 80, 4, 875, 28661, 'Sword', 'Pyro', 1, 2);
+INSERT INTO characters VALUES(NULL, 'Eula', 81, 5, 1899, 20470, 'Claymore', 'Cyro', 2, 3);
+INSERT INTO characters VALUES(NULL, 'Lisa', 20, 4, 209, 2661, 'Catalyst', 'Electro', 2, 4);
 
 CREATE TABLE `db_design`.`weapons` (
 	`id` INT NOT NULL AUTO_INCREMENT,
