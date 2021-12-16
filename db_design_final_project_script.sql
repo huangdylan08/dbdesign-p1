@@ -63,7 +63,7 @@ CREATE TABLE `db_design`.`characters` (
 		REFERENCES `db_design`.`users` (`id`)
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION,
-	CONSTRAIN `character_to_weapon`
+	CONSTRAINT `character_to_weapon`
 		FOREIGN KEY (`weapon_id`)
 		REFERENCES `db_design`.`weapons` (`id`)
 		ON DELETE NO ACTION
